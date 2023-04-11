@@ -4,6 +4,7 @@ interface InfoType {
   title: string
   userImg: string
   username: string
+  occupation: string
   description: string
   beian?: string
   github: {
@@ -36,6 +37,7 @@ const info: InfoType = {
   title: 'plainSpace',
   userImg: 'https://kifimg.oss-cn-beijing.aliyuncs.com/img/202304111544513.png',
   username: 'kif',
+  occupation: '前端',
   description: 'plainSpace 是基于nuxt3开发的个人静态博客',
   github: {
     name: 'plainSpace',

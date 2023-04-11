@@ -1,6 +1,8 @@
 <script setup lang="ts">
-const url = 'https://kifimg.oss-cn-beijing.aliyuncs.com/img/202212282307226.png'
+import { useI18n } from 'vue-i18n'
 const props = defineProps(['topPostList'])
+const { t } = useI18n()
+const url = 'https://kifimg.oss-cn-beijing.aliyuncs.com/img/202212282307226.png'
 const navTo = function (path: string) {
   navigateTo(path) //
 }
@@ -8,10 +10,10 @@ const navTo = function (path: string) {
 
 <template>
   <div class="card">
-    <input type="radio" name="select" id="slide_1" checked />
-    <input type="radio" name="select" id="slide_2" />
-    <input type="radio" name="select" id="slide_3" />
-    <input type="checkbox" id="slideImg" />
+    <input id="slide_1" type="radio" name="select" checked />
+    <input id="slide_2" type="radio" name="select" />
+    <input id="slide_3" type="radio" name="select" />
+    <input id="slideImg" type="checkbox" />
 
     <div class="slider">
       <label for="slide_1" class="slide slide_1"></label>
@@ -19,14 +21,14 @@ const navTo = function (path: string) {
       <label for="slide_3" class="slide slide_3"></label>
     </div>
 
-    <div class="inner_part" v-for="(item, index) in props.topPostList">
+    <div v-for="(item, index) in props.topPostList" class="inner_part">
       <label for="slideImg" class="img">
         <img class="object-cover" :class="`img_${index + 1}`" :src="item.cover" />
       </label>
       <div class="content" :class="`content_${index + 1}`">
         <div class="title">{{ item.title }}</div>
         <div class="text"></div>
-        <button @click="navTo(item.path)">更多</button>
+        <button @click="navTo(item.path)">{{ $t('more') }}</button>
       </div>
     </div>
 

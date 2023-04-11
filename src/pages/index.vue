@@ -72,7 +72,7 @@ postList.value.forEach((item) => {
           {{ link.title }}
         </div>
         <div class="post_content"></div>
-        <div class="date float-right font-20 text-sm kif-info">发布于 {{ link.date }}</div>
+        <div class="date float-right font-20 text-sm kif-info">{{ $t('postTime') }} {{ link.date }}</div>
       </div>
       <!-- </NuxtLink> -->
     </div>

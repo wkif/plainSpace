@@ -7,7 +7,6 @@ const props = defineProps<{
 <template>
   <div>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,800&display=swap" rel="stylesheet" />
-
     <h1 class="rainbow-text font-800 w-13em m-l-a m-r-a" style="font-family: 'Work Sans', sans-serif; font-size: 5em; line-height: 0.9em">
       {{ props.title }}
     </h1>

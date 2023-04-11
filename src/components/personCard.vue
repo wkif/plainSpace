@@ -2,8 +2,9 @@
 import { storeToRefs } from 'pinia'
 import JSConfetti from 'js-confetti'
 import { mainStore } from '../stores/index'
+
 const mainSt = mainStore()
-const { userImg, username, address, email, github, description, studyAndWorkExperience } = storeToRefs(mainSt)
+const { userImg, username, address, occupation, email, github, description, studyAndWorkExperience } = storeToRefs(mainSt)
 let showConfetti = () => {}
 if (process.client) {
   const buttons = document.querySelectorAll('.card-buttons button')
@@ -48,18 +49,18 @@ onMounted(() => {
         src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
         alt="avatar" /> -->
       <h1 class="card-fullname">{{ username }}</h1>
-      <h2 class="card-jobtitle">前端</h2>
+      <h2 class="card-jobtitle">{{ occupation }}</h2>
     </div>
     <div class="card-main">
       <div id="about" class="card-section is-active">
         <div class="card-content">
-          <div class="card-subtitle">简介</div>
+          <div class="card-subtitle">{{ $t('person.introduction') }}</div>
           <p class="card-desc">{{ description }}</p>
         </div>
       </div>
       <div id="experience" class="card-section">
         <div class="card-content">
-          <div class="card-subtitle">学习工作经历</div>
+          <div class="card-subtitle">{{ $t('person.exp') }}</div>
           <div class="card-timeline">
             <div v-for="item in studyAndWorkExperience" :key="item.id" class="card-item" :data-year="item.time">
               <div class="card-item-title">
@@ -72,7 +73,7 @@ onMounted(() => {
       </div>
       <div id="contact" class="card-section">
         <div class="card-content">
-          <div class="card-subtitle">联系</div>
+          <div class="card-subtitle">{{ $t('person.contact') }}</div>
           <div class="card-contact-wrapper">
             <div class="card-contact">
               <svg
@@ -125,9 +126,9 @@ onMounted(() => {
         </div>
       </div>
       <div class="card-buttons">
-        <button data-section="#about" class="is-active">关于</button>
-        <button data-section="#experience">经历</button>
-        <button data-section="#contact">联系</button>
+        <button data-section="#about" class="is-active">{{ $t('person.about') }}</button>
+        <button data-section="#experience">{{ $t('person.exp') }}</button>
+        <button data-section="#contact">{{ $t('person.contact') }}</button>
       </div>
     </div>
   </div>

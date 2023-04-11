@@ -21,12 +21,12 @@ if (description.value && data.value) {
       <ContentRendererMarkdown :value="data" />
     </ContentRenderer>
     <div class="book m-t-50px">
-      <div class="tracking-in-expand-fwd">书籍</div>
+      <div class="tracking-in-expand-fwd">{{ $t('book') }}</div>
       <div class="w-50% h-1rem kif-bg-success m-1rem"></div>
       <BookShelf />
     </div>
     <div class="film">
-      <div class="tracking-in-expand-fwd">电影</div>
+      <div class="tracking-in-expand-fwd">{{ $t('film') }}</div>
       <div class="w-50% h-1rem kif-bg-success m-1rem"></div>
       <Film />
     </div>

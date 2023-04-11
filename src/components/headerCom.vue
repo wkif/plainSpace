@@ -7,6 +7,7 @@ const mainSt = mainStore()
 const { t, locale } = useI18n()
 const { currentPath } = storeToRefs(mainSt)
 const changeLanguage = function () {
+  console.log('locale.value', locale.value)
   if (locale.value === 'zh') {
     locale.value = 'en'
   } else {
@@ -16,16 +17,16 @@ const changeLanguage = function () {
 
 const linkList = [
   {
-    name: t('nav.home'),
+    name: 'nav.home',
     link: '/',
   },
 
   {
-    name: t('nav.link'),
+    name: 'nav.link',
     link: '/link',
   },
   {
-    name: t('nav.about'),
+    name: 'nav.about',
     link: '/about',
   },
 ]
@@ -46,7 +47,7 @@ const nav = function (url: string) {
       <NuxtLink class="pa-2rem" to="/about"> {{ $t('nav.about') }}</NuxtLink> -->
       <div v-for="link in linkList" :key="link.link" class="pa-2rem" @click="nav(link.link)">
         <div class="name p-2px">
-          {{ link.name }}
+          {{ $t(link.name) }}
         </div>
         <div class="line w-100% h-4px" :class="link.link === currentPath ? 'kif-bg-success' : ''"></div>
       </div>

@@ -6,6 +6,7 @@ const path = ref(route.path)
 
 const { data } = await useAsyncData('page-data', () => queryContent(path.value).findOne())!
 const title = ref(data.value ? data.value.title : '')
+const cover = ref(data.value ? data.value.cover : '')
 if (data.value) {
   setTimeout(() => {
     mainSt.updateLoadingFlag(false)
@@ -40,6 +41,7 @@ console.log(data.value!.title, 'kkk')
     返回
   </div>
   <div class="w-30% h-0.5rem kif-bg-primary"></div>
+  <!-- <div class="bg" :style="`background-image: url(${cover});`"></div> -->
   <!-- 跳转锚点  -->
   <toTop :list="idList" />
   <articleTitle :title="title" />
@@ -53,3 +55,11 @@ console.log(data.value!.title, 'kkk')
     <valineCommit :path="path" />
   </div>
 </template>
+
+<style lang="less" scoped>
+.bg {
+  position: fixed;
+
+  width: 100%;
+}
+</style>

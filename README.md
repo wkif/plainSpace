@@ -2,10 +2,11 @@
 
 <div align="center">
   <br/>
-  <h1>🏳️‍🌈 <b>kifroom Blog 🏳️‍🌈</b></h1>
+  <h1>🏳️‍🌈 <b>plainSpace 🏳️‍🌈</b></h1>
 </div>
 
-kifroom is a personal blog project based on nuxt3+Ts+Vite+Pinia.
+
+plainSpace is a personal blog project based on nuxt3+Ts+Vite+Pinia.
 
 
 

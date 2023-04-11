@@ -6,5 +6,20 @@
     "about": "关于",
     "link": "友链",
     "classify": "分类"
-  }
+  },
+  "more": "更多",
+  "person": {
+    "about": "关于",
+    "exp": "经历",
+    "contact": "联系",
+    "introduction": "简介"
+  },
+  "postTime": "发布于",
+  "pageCon": {
+    "length": "文章总数",
+    "pageCount": "总页数",
+    "currentPage": "当前页码"
+  },
+  "book": "书籍",
+  "film": "电影"
 }

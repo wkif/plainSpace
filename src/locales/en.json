@@ -6,5 +6,20 @@
     "about": "about",
     "link": "link",
     "classify": "classify"
-  }
+  },
+  "more": "more",
+  "person": {
+    "about": "about",
+    "exp": "experience",
+    "contact": "contact",
+    "introduction": "introduction"
+  },
+  "postTime": "Publish on",
+  "pageCon": {
+    "length": "Number of articles",
+    "pageCount": "Total page count",
+    "currentPage": "Current page number"
+  },
+  "book": "book",
+  "film": "film"
 }

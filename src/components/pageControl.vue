@@ -123,7 +123,12 @@ onMounted(() => {
 
 <template>
   <div class="flex flex-row items-center w-60rem kif-bg-primary p-10px b-rd m-b-1" style="color: white">
-    <div class="page_count flex-1">共 {{ postList.length }}篇文章 {{ pageControl.pageCount }}页 当前第{{ pageControl.currentPage }}页</div>
+    <div class="page_count flex-1">
+      {{ $t('pageCon.length') }}: {{ postList.length }} {{ $t('pageCon.pageCount') }}:
+      {{ pageControl.pageCount }}
+      {{ $t('pageCon.currentPage') }}:
+      {{ pageControl.currentPage }}
+    </div>
 
     <!-- <div class="page_size_select flex-1">
       <select v-model="pageControl.pageSize" class="w-6rem kif-bg-success b-rd" style="border: none; line-height: 28px; border: 1px solid white">
