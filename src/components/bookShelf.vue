@@ -13,16 +13,16 @@ function goto(url: string | undefined) {
 
 <template v-if="bookshelfList.length">
   <div v-for="(ul, index) in bookshelfList" :key="index" class="bookshelf">
-    <div class="book-grid">
+    <div v-if="ul.length" class="book-grid">
       <ul>
         <li v-for="(book, index) in ul" :key="index">
           <div class="p-10px">{{ book.name }}</div>
           <img :src="book.image" alt="" srcset="" @click="goto(book.url)" />
         </li>
       </ul>
+      <div class="shelf-shadows"></div>
+      <div class="shelf"></div>
     </div>
-    <div class="shelf-shadows"></div>
-    <div class="shelf"></div>
   </div>
 </template>
 

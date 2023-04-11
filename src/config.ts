@@ -5,6 +5,7 @@ interface InfoType {
   userImg: string
   username: string
   description: string
+  beian?: string
   github: {
     name: string
     link: string
@@ -53,6 +54,7 @@ const info: InfoType = {
       desc: '网络工程专业',
     },
   ],
+  beian: '湘ICP备2021015742号-1',
 }
 
 // valine 设置  https://valine.js.org/

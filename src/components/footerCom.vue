@@ -2,32 +2,16 @@
 import { storeToRefs } from 'pinia'
 import { mainStore } from '../stores/index'
 const mainSt = mainStore()
-const { github } = storeToRefs(mainSt)
+const { github, beian } = storeToRefs(mainSt)
 </script>
 
 <template>
-  <div class="">
-    <!-- <div class="flex w-100vw p-t-4% p-b-4% p-l-2% p-r-2% h-74vh">
-      <div class="box">
-        <img src="https://source.unsplash.com/1000x800" />
-        <span>CSS</span>
-      </div>
-      <div class="box">
-        <img src="https://source.unsplash.com/1000x802" />
-        <span>Image</span>
-      </div>
-      <div class="box">
-        <img src="https://source.unsplash.com/1000x804" />
-        <span>Hover</span>
-      </div>
-      <div class="box">
-        <img src="https://source.unsplash.com/1000x806" />
-        <span>Effect</span>
-      </div>
-    </div> -->
+  <div>
+    <a target="_blank" style="color: #5c6b77" href="https://beian.miit.gov.cn/">{{ beian }}</a>
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0</a>
     2021-PRESENT ©
     <a :href="github.link">{{ github.name }}</a>
+    <a class="w-10px"></a>
   </div>
 </template>
 

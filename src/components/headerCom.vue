@@ -19,10 +19,7 @@ const linkList = [
     name: t('nav.home'),
     link: '/',
   },
-  {
-    name: t('nav.classify'),
-    link: '/classify',
-  },
+
   {
     name: t('nav.link'),
     link: '/link',
