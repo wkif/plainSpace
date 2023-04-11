@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Oblique';
+  font-weight: normal;
+  src: url('../../assets/font/SmileySans-Oblique.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MiSansLight';
+  font-weight: normal;
+  src: url('../../assets/font/._MiSans-Light.ttf') format('truetype');
+}
+.iconfont {
+  font-family: 'Oblique' !important;
+  font-size: 16px;
+  font-style: normal;
+}

@@ -1,0 +1,10 @@
+{
+  "language": "english",
+  "title": "kifroom",
+  "nav": {
+    "home": "home",
+    "about": "about",
+    "link": "link",
+    "classify": "classify"
+  }
+}
